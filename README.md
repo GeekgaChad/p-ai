@@ -1,1 +1,1 @@
-# P_AI – Retrieval-Augmented Personal Assistant
+# P_AI – RAG Personal Assistant
