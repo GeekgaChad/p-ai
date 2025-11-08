@@ -1,0 +1,7 @@
+fastapi>=0.115
+uvicorn[standard]
+pydantic-settings
+sqlalchemy>=2.0
+psycopg2-binary
+boto3
+pymupdf

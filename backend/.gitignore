@@ -1,0 +1,14 @@
+# env & secrets
+.env
+backend/.env
+*.env
+# venvs
+.venv/
+backend/.venv/
+# python cache
+__pycache__/
+*.pyc
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
