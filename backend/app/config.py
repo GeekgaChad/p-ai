@@ -1,15 +1,24 @@
 # env vars (pydantic Settings)
-
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import Field
 
 class Settings(BaseSettings):
     DB_URL: str
     S3_BUCKET: str
-    AWS_REGION: str = "us-west-2"
+    AWS_REGION: str = "ca-central-1"
+    BEDROCK_REGION: str | None = None
     BEDROCK_EMBED_MODEL: str = "amazon.titan-embed-text-v2:0"
     BEDROCK_CHAT_MODEL: str = "anthropic.claude-3-5-sonnet-20240620-v1:0"
 
-    class Config:
-        env_file = ".env"
+    # new: allow AWS profile to be set via .env
+    AWS_PROFILE: str | None = None
+
+    # ✅ FIXED — use '=' not ':' and 'extra' not 'extras'
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        case_sensitive=False,
+        extra="ignore",
+    )
 
 settings = Settings()
+

@@ -1,14 +1,51 @@
-# env & secrets
-.env
-backend/.env
-*.env
-# venvs
-.venv/
-backend/.venv/
-# python cache
-__pycache__/
-*.pyc
-# OS/editor
+# OS / editors
 .DS_Store
 .idea/
 .vscode/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+backend/.venv/
+
+# Env / secrets
+.env
+*.env
+backend/.env
+infra/*.tfvars
+*.pem
+*.key
+*.crt
+
+# Local config / creds
+.aws/
+.aws/*
+.credentials
+*.sqlite
+*.db
+
+# Logs / junk
+*.log
+logs/
+tmp/
+.cache/
+.coverage
+.pytest_cache/
+
+# Build / dist
+dist/
+build/
+
+# Node (for later frontend)
+node_modules/
+*.map
+.next/
+out/
+
+# PDFs
+*.pdf
+

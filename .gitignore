@@ -1,0 +1,11 @@
+
+# PDFs
+*.pdf
+
+
+# PDFs
+*.pdf
+
+# Python build artifacts
+*.egg-info/
+

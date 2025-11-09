@@ -1,7 +1,9 @@
-fastapi>=0.115
+fastapi>=0.121
 uvicorn[standard]
 pydantic-settings
 sqlalchemy>=2.0
 psycopg2-binary
 boto3
 pymupdf
+python-multipart
+pgvector
