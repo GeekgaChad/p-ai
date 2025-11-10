@@ -12,6 +12,11 @@ class Settings(BaseSettings):
 
     # new: allow AWS profile to be set via .env
     AWS_PROFILE: str | None = None
+    # add these
+    DRY_INGEST: bool = False
+    USE_PYMUPDF: bool = True
+    EMBED_BATCH_SIZE: int = 64
+    EMBED_TIMEOUT_SECS: int = 30
 
     # ✅ FIXED — use '=' not ':' and 'extra' not 'extras'
     model_config = SettingsConfigDict(
@@ -21,4 +26,5 @@ class Settings(BaseSettings):
     )
 
 settings = Settings()
+
 
