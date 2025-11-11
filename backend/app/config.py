@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     AWS_REGION: str = "ca-central-1"
     BEDROCK_REGION: str | None = None
     BEDROCK_EMBED_MODEL: str = "amazon.titan-embed-text-v2:0"
-    BEDROCK_CHAT_MODEL: str = "anthropic.claude-3-5-sonnet-20240620-v1:0"
+    BEDROCK_CHAT_MODEL: str = "amazon.titan-text-express-v1" # default
 
     # new: allow AWS profile to be set via .env
     AWS_PROFILE: str | None = None
